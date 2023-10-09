@@ -11,7 +11,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/invoice" element={<Invoices/>} />
-       {/* <Route path="/AddNew" element={<AddNew/>}/> */}
       <Route path="*" element={<div>NOt Found</div>} />
      
     </Routes>
@@ -20,5 +19,5 @@ function App() {
    </main>
   )
 }
-
+hghjhg
 export default App

@@ -399,3 +399,36 @@ select {
   pointer-events: none;
   opacity: 50%;
 }
+@media (max-width: 780Px)
+{
+ .sidebar{
+  
+    height: "80px";
+    width: "100%";
+    flex-Direction: "row";
+    align-Items: "center";
+    position: "relative",
+ }
+   .sidebar-logo{
+      width: "90px";
+      height: "80px";
+
+      img {
+        width: "30px",
+      }
+    }
+
+    .sidebar-bottom {
+      flex-Direction: "row";
+      justify-Content: "space-between";
+      align-Items: "center";
+      margin-Bottom: "0px";
+      margin-Right: "30px";
+      width: "100px";
+      height: "100%";
+    }
+  }
+
+
+ 
+

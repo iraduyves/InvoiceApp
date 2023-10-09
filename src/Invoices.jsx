@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 import moment from 'moment'
-
-export const Invoices = ({ setExpand, data }) => {
+export const Invoices = ({ setExpand, data}) => {
+  
   console.log({ data })
   return (
     <div className="main__container">
@@ -24,7 +24,11 @@ export const Invoices = ({ setExpand, data }) => {
 
         <div className="details__btns">
           <button
-            className="edit__btn" >Edit
+            className="edit__btn" 
+            onClick={() => {
+               
+            }}
+            >Edit
           </button>
           <button className="delete__btn">
             Delete

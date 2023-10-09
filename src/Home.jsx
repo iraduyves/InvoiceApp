@@ -1,10 +1,7 @@
 /* eslint-disable no-unsafe-optional-chaining */
 /* eslint-disable react/prop-types */
-
-// import { Link, Route, Routes } from "react-router-dom";
-// import AddNew from "./AddNew";
 import moment from "moment";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Invoices from "./Invoices";
 
 function AddNew(props) {
@@ -214,7 +211,9 @@ function AddNew(props) {
 
           </div>
 
-          <button className="add__item-btn">
+          <button className="add__item-btn"
+            onClick={handleSubmit}
+          >
             Add New Item
           </button>
 
@@ -232,7 +231,7 @@ function AddNew(props) {
 
               <button
                 className="mark__as-btn"
-                onClick={handleSubmit}
+                
               >
                 Send & Save
               </button>
@@ -268,7 +267,7 @@ const defaultFormData = {
     price: '',
   },
   mySelect: 'pending'
-  // Initialize items as an empty array
+
 }
 
 export default function Home() {
@@ -289,8 +288,6 @@ export default function Home() {
 
 
 
-  // const [allItems, SetAllItems] = useState([])
-  // Function to handle changes in the form fields
   function handleInputChange(e) {
     const { name, value } = e.target;
     const [groupName, fieldName] = name.split(".");
@@ -333,13 +330,8 @@ export default function Home() {
         <div className="invoice-header-logo">
           <h3>Invoices</h3>
           <p>There are total {data.length || 0} {data.length == 1 ? "invoice" : "invoices"}</p>
-          {/* {data.length} */}
         </div>
-
         <button onClick={navigate} className="btn">Add New</button>
-
-
-
         {
           isVisible ? <AddNew
             formData={formData}
@@ -399,7 +391,7 @@ function DataItem({ item, expand, setBigData }) {
     <div className="invoice-item">
       <div>
         <h5 className="invoice-id">
-          {item.billFrom.postalCode}
+          #{item.billFrom.postalCode}
         </h5>
       </div>
 
@@ -432,6 +424,7 @@ function DataItem({ item, expand, setBigData }) {
           marginLeft: '1rem'
         }}
           onClick={() => {
+           
             expand(true)
             setBigData(item)
           }}
