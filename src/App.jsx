@@ -19,5 +19,5 @@ function App() {
    </main>
   )
 }
-hghjhg
+
 export default App
