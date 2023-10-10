@@ -430,5 +430,5 @@ function DataItem({ item, expand, setBigData }) {
         >{'>'}</button>
       </div>
     </div>
-  )j
+  )
 }
